@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent-purple: #7c3aed;
+  --accent-blue: #2563eb;
+  --accent-purple-light: #a78bfa;
+  --accent-blue-light: #60a5fa;
+  --border-subtle: rgba(124, 58, 237, 0.25);
+  --card-bg: rgba(255, 255, 255, 0.03);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Fade-in animation for scroll reveals */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blobPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  33% { transform: scale(1.05) rotate(3deg); }
+  66% { transform: scale(0.97) rotate(-2deg); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.animate-blob {
+  animation: blobPulse 8s ease-in-out infinite;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scroll reveal — hidden by default, JS adds .visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card with purple border */
+.card-accent {
+  background: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-accent:hover {
+  border-color: rgba(124, 58, 237, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Stat card */
+.stat-card {
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.4);
+  border-radius: 3px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
