@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="o-meni" className="py-28 px-6">
@@ -14,43 +16,15 @@ export default function About() {
         </h2>
 
         <div className="flex flex-col md:flex-row gap-12 items-start">
-          {/* Photo placeholder */}
           <div className="reveal flex-shrink-0" style={{ transitionDelay: "0ms" }}>
-            <div
-              className="w-48 h-48 md:w-64 md:h-64 rounded-2xl flex items-center justify-center relative overflow-hidden"
-              style={{
-                background: "rgba(124,58,237,0.08)",
-                border: "1px solid rgba(124,58,237,0.25)",
-              }}
-            >
-              {/* TODO: zamijeni s pravom fotografijom */}
-              <div className="flex flex-col items-center gap-2 text-center px-4">
-                <svg
-                  className="w-10 h-10 text-purple-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-                <span className="text-[10px] text-purple-800 uppercase tracking-widest">
-                  Foto
-                </span>
-              </div>
-              {/* Gradient overlay */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-1/2 opacity-30"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(124,58,237,0.3), transparent)",
-                }}
-              />
-            </div>
+            <Image
+              src="/dominik-petrac.webp"
+              alt="Dominik Petrac"
+              width={256}
+              height={384}
+              className="rounded-2xl object-cover object-top"
+              priority
+            />
           </div>
 
           {/* Text */}
