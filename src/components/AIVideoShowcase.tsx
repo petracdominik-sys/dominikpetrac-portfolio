@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function AIVideoShowcase() {
   return (
     <section id="ai-video" className="py-28 px-6">
@@ -21,30 +23,36 @@ export default function AIVideoShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Card 1 — Regge Bari */}
           <div className="reveal card-accent overflow-hidden" style={{ transitionDelay: "0ms" }}>
-            <div
-              className="relative bg-[#111] overflow-hidden"
-              style={{ aspectRatio: "3/2" }}
-            >
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src="/bari.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute top-3 left-3">
-                <span
-                  className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full"
-                  style={{
-                    background: "rgba(0,0,0,0.65)",
-                    border: "1px solid rgba(124,58,237,0.4)",
-                    color: "#a78bfa",
-                  }}
-                >
-                  AI video
-                </span>
+            {/* Foto → Video split */}
+            <div className="flex h-56 overflow-hidden">
+              {/* Left: source photo */}
+              <div className="relative flex-1 bg-gray-950 overflow-hidden">
+                <Image
+                  src="/bari-foto.webp"
+                  alt="Bari stolica — originalna fotografija"
+                  fill
+                  className="object-contain"
+                />
+                <div className="absolute bottom-2 left-2">
+                  <span className="text-[9px] uppercase tracking-widest px-2 py-0.5 rounded" style={{ background: "rgba(0,0,0,0.6)", color: "rgba(255,255,255,0.5)" }}>
+                    Originalna foto
+                  </span>
+                </div>
+              </div>
+              {/* Arrow */}
+              <div className="flex items-center justify-center w-8 flex-shrink-0 bg-[#0d0d0d]">
+                <span className="text-purple-600 text-base font-bold">→</span>
+              </div>
+              {/* Right: video */}
+              <div className="relative flex-1 bg-[#111] flex items-center justify-center overflow-hidden">
+                <video autoPlay muted loop playsInline className="h-full w-full object-cover">
+                  <source src="/bari.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute bottom-2 right-2">
+                  <span className="text-[9px] uppercase tracking-widest px-2 py-0.5 rounded" style={{ background: "rgba(0,0,0,0.6)", color: "#a78bfa" }}>
+                    AI video
+                  </span>
+                </div>
               </div>
             </div>
             <div className="p-7">
@@ -64,30 +72,36 @@ export default function AIVideoShowcase() {
 
           {/* Card 2 — Europa 92 */}
           <div className="reveal card-accent overflow-hidden" style={{ transitionDelay: "120ms" }}>
-            <div
-              className="relative bg-[#111] flex items-center justify-center overflow-hidden"
-              style={{ aspectRatio: "3/2" }}
-            >
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="h-full w-auto"
-              >
-                <source src="/europa92.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute top-3 left-3">
-                <span
-                  className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full"
-                  style={{
-                    background: "rgba(0,0,0,0.65)",
-                    border: "1px solid rgba(124,58,237,0.4)",
-                    color: "#a78bfa",
-                  }}
-                >
-                  AI video
-                </span>
+            {/* Foto → Video split */}
+            <div className="flex h-56 overflow-hidden">
+              {/* Left: source photo */}
+              <div className="relative flex-1 bg-gray-950 overflow-hidden">
+                <Image
+                  src="/europa92-foto.webp"
+                  alt="Europa 92 — originalna fotografija"
+                  fill
+                  className="object-contain object-top"
+                />
+                <div className="absolute bottom-2 left-2">
+                  <span className="text-[9px] uppercase tracking-widest px-2 py-0.5 rounded" style={{ background: "rgba(0,0,0,0.6)", color: "rgba(255,255,255,0.5)" }}>
+                    Originalna foto
+                  </span>
+                </div>
+              </div>
+              {/* Arrow */}
+              <div className="flex items-center justify-center w-8 flex-shrink-0 bg-[#0d0d0d]">
+                <span className="text-purple-600 text-base font-bold">→</span>
+              </div>
+              {/* Right: video */}
+              <div className="relative flex-1 bg-[#111] flex items-center justify-center overflow-hidden">
+                <video autoPlay muted loop playsInline className="h-full w-auto">
+                  <source src="/europa92.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute bottom-2 right-2">
+                  <span className="text-[9px] uppercase tracking-widest px-2 py-0.5 rounded" style={{ background: "rgba(0,0,0,0.6)", color: "#a78bfa" }}>
+                    AI video
+                  </span>
+                </div>
               </div>
             </div>
             <div className="p-7">
@@ -99,8 +113,7 @@ export default function AIVideoShowcase() {
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Product fotografija animirana u Instagram Stories format. AI
-                generacija pokreta osobe i pozadine iz jedne statične
-                fotografije.
+                generacija pokreta iz jedne statične fotografije.
               </p>
               <p className="text-gray-600 text-xs mt-3">Alati: Higgsfield AI</p>
             </div>
