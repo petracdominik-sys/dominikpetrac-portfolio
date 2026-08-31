@@ -19,90 +19,90 @@ export default function AIVideoShowcase() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Card 1 — with video placeholder */}
+          {/* Card 1 — Regge Bari */}
           <div className="reveal card-accent overflow-hidden" style={{ transitionDelay: "0ms" }}>
-            <div className="relative aspect-video bg-[#111] flex items-center justify-center">
-              {/* TODO: zamijeniti s pravim video linkom kad bude dostupan */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-6">
-                <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center"
+            <div
+              className="relative bg-[#111] overflow-hidden"
+              style={{ aspectRatio: "3/2" }}
+            >
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/bari.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute top-3 left-3">
+                <span
+                  className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full"
                   style={{
-                    background: "rgba(124, 58, 237, 0.2)",
-                    border: "1px solid rgba(124, 58, 237, 0.4)",
+                    background: "rgba(0,0,0,0.65)",
+                    border: "1px solid rgba(124,58,237,0.4)",
+                    color: "#a78bfa",
                   }}
                 >
-                  <svg
-                    className="w-6 h-6 text-purple-400 ml-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-gray-500 text-xs uppercase tracking-widest">
-                  Video uskoro
-                </p>
+                  AI video
+                </span>
               </div>
-              {/* Subtle gradient overlay */}
-              <div
-                className="absolute inset-0 opacity-30"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(124,58,237,0.3) 0%, rgba(37,99,235,0.3) 100%)",
-                }}
-              />
+            </div>
+            <div className="p-7">
+              <h3 className="font-semibold text-white text-lg mb-2">
+                Regge Interijeri — Bari stolica
+              </h3>
+              <p className="text-xs text-purple-400 font-medium tracking-wide uppercase mb-3">
+                Statična foto → AI video
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Product fotografija Bari stolice pretvorena u animirani video
+                klip za Meta oglase. Bez studija, glumaca ili kamere.
+              </p>
+              <p className="text-gray-600 text-xs mt-3">Alati: Higgsfield AI</p>
+            </div>
+          </div>
+
+          {/* Card 2 — Europa 92 */}
+          <div className="reveal card-accent overflow-hidden" style={{ transitionDelay: "120ms" }}>
+            <div
+              className="relative bg-[#111] flex items-center justify-center overflow-hidden"
+              style={{ aspectRatio: "3/2" }}
+            >
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-full w-auto"
+              >
+                <source src="/europa92.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute top-3 left-3">
+                <span
+                  className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full"
+                  style={{
+                    background: "rgba(0,0,0,0.65)",
+                    border: "1px solid rgba(124,58,237,0.4)",
+                    color: "#a78bfa",
+                  }}
+                >
+                  AI video
+                </span>
+              </div>
             </div>
             <div className="p-7">
               <h3 className="font-semibold text-white text-lg mb-2">
                 Europa 92 — Denim bar
               </h3>
               <p className="text-xs text-purple-400 font-medium tracking-wide uppercase mb-3">
-                Demonstracija
+                Statična foto → Instagram Story
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                AI generacija videa iz product fotografije za Instagram Stories
-                format.
+                Product fotografija animirana u Instagram Stories format. AI
+                generacija pokreta osobe i pozadine iz jedne statične
+                fotografije.
               </p>
               <p className="text-gray-600 text-xs mt-3">Alati: Higgsfield AI</p>
-            </div>
-          </div>
-
-          {/* Card 2 — coming soon */}
-          <div className="reveal card-accent overflow-hidden" style={{ transitionDelay: "120ms" }}>
-            <div className="relative aspect-video bg-[#111] flex items-center justify-center">
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                <span
-                  className="text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full"
-                  style={{
-                    background: "rgba(124,58,237,0.15)",
-                    border: "1px solid rgba(124,58,237,0.35)",
-                    color: "#a78bfa",
-                  }}
-                >
-                  U pripremi
-                </span>
-                <p className="text-gray-600 text-xs">Coming soon</p>
-              </div>
-              <div
-                className="absolute inset-0 opacity-20"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(37,99,235,0.4) 0%, rgba(124,58,237,0.4) 100%)",
-                }}
-              />
-            </div>
-            <div className="p-7">
-              <h3 className="font-semibold text-white text-lg mb-2">
-                Regge Interijeri — HoReCa kampanja
-              </h3>
-              <p className="text-xs text-blue-400 font-medium tracking-wide uppercase mb-3">
-                U pripremi
-              </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                10-scenski video kampanja za Grace stolicu (AB046), ciljano na
-                vlasnike boutique hotela. Promptovi i scenariji: gotovi.
-                Generacija: planirana.
-              </p>
             </div>
           </div>
         </div>
