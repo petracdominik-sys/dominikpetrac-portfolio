@@ -23,7 +23,7 @@ export default function About() {
               width={256}
               height={384}
               className="rounded-2xl object-cover object-top"
-              style={{ filter: "brightness(0.82)" }}
+              style={{ filter: "brightness(0.72)" }}
               priority
             />
           </div>
