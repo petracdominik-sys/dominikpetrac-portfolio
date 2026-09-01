@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const stats = [
   { label: "Leadovi generirani", value: "185" },
   { label: "Cijena po leadu (CPL)", value: "5,47 €" },
@@ -7,7 +9,7 @@ const stats = [
   { label: "CTR", value: "1,31 %" },
   { label: "CPC", value: "0,36 €" },
   { label: "CPM", value: "4,77 €" },
-  { label: "Trajanje kampanje", value: "5 mj." },
+  { label: "Trajanje kampanje", value: "4 mj." },
   { label: "Doseg", value: "35.802" },
 ];
 
@@ -122,6 +124,22 @@ export default function CaseStudyRegge() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Meta Ads screenshot */}
+        <div className="reveal mb-16">
+          <div className="rounded-xl overflow-hidden border border-white/5">
+            <Image
+              src="/meta-ads-report.png"
+              alt="Meta Ads Manager — rezultati kampanje Leads_Test 1"
+              width={1400}
+              height={600}
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-gray-700 text-[10px] mt-2 text-center tracking-wider uppercase">
+            Meta Ads Manager · Leads_Test 1 · travanj – srpanj 2026.
+          </p>
         </div>
 
         {/* System map */}
