@@ -119,6 +119,53 @@ export default function AIVideoShowcase() {
             </div>
           </div>
         </div>
+
+        {/* Regge oglas s overlayem */}
+        <div className="reveal mt-8 card-accent overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {/* Video */}
+            <div className="relative bg-[#0d0d0d] flex items-center justify-center overflow-hidden" style={{ minHeight: "260px" }}>
+              <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                <source src="/issa-bari-oglas.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute top-3 left-3">
+                <span className="text-[9px] uppercase tracking-widest px-2 py-0.5 rounded" style={{ background: "rgba(0,0,0,0.7)", color: "#a78bfa" }}>
+                  Meta Ads creative
+                </span>
+              </div>
+            </div>
+            {/* Info */}
+            <div className="p-7 flex flex-col justify-center gap-4">
+              <div>
+                <p className="text-xs text-purple-400 font-semibold tracking-widest uppercase mb-2">
+                  Finished ad — s Regge overlayem
+                </p>
+                <h3 className="font-semibold text-white text-xl mb-3">
+                  Issa barska & Bari stolica
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Higgsfield AI video produkcija + FFmpeg overlay pipeline: branding boja, logo i
+                  CTA tekst nanešeni programatski. Finalni klip spreman za Meta Ads bez ručnog editinga.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 text-xs text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 flex-shrink-0" />
+                  Higgsfield AI — kinematski video iz product fota
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 flex-shrink-0" />
+                  FFmpeg overlay — Regge branding (#00923F), logo, CTA
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 flex-shrink-0" />
+                  Output: 9:16 format, Meta Ads ready
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
