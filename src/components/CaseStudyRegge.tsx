@@ -1,14 +1,16 @@
 "use client";
 
+import Image from "next/image";
+
 const stats = [
-  { label: "CPL — Varijacija A", value: "€30.96" },
-  { label: "CPL — Issa & Bari", value: "€41.72" },
-  { label: "Ukupna potrošnja (30d)", value: "€372.85" },
-  { label: "Leadovi generirani (30d)", value: "11" },
-  { label: "n8n workflowovi (V1–V9)", value: "9" },
-  { label: "HubSpot pipeline", value: "aktivan" },
-  { label: "CAPI tracking", value: "server-side" },
-  { label: "Jedini ručni korak", value: "30s review" },
+  { label: "Leadovi generirani", value: "185" },
+  { label: "Cijena po leadu (CPL)", value: "5,47 €" },
+  { label: "Ukupna potrošnja", value: "1.013 €" },
+  { label: "CTR", value: "1,31 %" },
+  { label: "CPC", value: "0,36 €" },
+  { label: "CPM", value: "4,77 €" },
+  { label: "Trajanje kampanje", value: "4 mj." },
+  { label: "Doseg", value: "35.802" },
 ];
 
 const phases = [
@@ -83,13 +85,16 @@ export default function CaseStudyRegge() {
           <div className="reveal card-accent p-7" style={{ transitionDelay: "100ms" }}>
             <p className="text-xs font-bold tracking-widest uppercase text-purple-400 mb-3">Rješenje</p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Kompletan ekosustav od nule: Meta Ads kampanje s CAPI trackingom, HubSpot CRM pipeline, 9 automatiziranih n8n workflowova (V1–V9) i AI tjedni intelligence digest.
+              Kompletan ekosustav od nule: Meta Ads kampanje, HubSpot CRM pipeline,
+              16 automatiziranih n8n workflowova (webhook → AI analiza → personalizirana
+              ponuda → nurture), server-side tracking i tjedni AI intelligence digest.
             </p>
           </div>
           <div className="reveal card-accent p-7" style={{ transitionDelay: "200ms" }}>
             <p className="text-xs font-bold tracking-widest uppercase text-purple-400 mb-3">Rezultat</p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Aktivne kampanje s CPL od €30.96 za vodeću varijaciju. Jedini ručni korak u cijelom sustavu: 30 sekundi pregleda AI drafta ponude.
+              185 kvalificiranih leadova za 4 mjeseca, CPL 5,47 €, kampanja aktivna i danas.
+              Jedini ručni korak: 30-sekundni pregled AI drafta prije slanja.
             </p>
           </div>
         </div>
@@ -114,6 +119,22 @@ export default function CaseStudyRegge() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Meta Ads screenshot */}
+        <div className="reveal mb-16">
+          <div className="rounded-xl overflow-hidden border border-white/5">
+            <Image
+              src="/meta-ads-report.png"
+              alt="Meta Ads Manager — rezultati kampanje Leads_Test 1"
+              width={1400}
+              height={600}
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-gray-700 text-[10px] mt-2 text-center tracking-wider uppercase">
+            Meta Ads Manager · Leads_Test 1 · travanj – srpanj 2026.
+          </p>
         </div>
 
         {/* System map */}
