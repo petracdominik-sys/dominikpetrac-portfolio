@@ -2,25 +2,16 @@
 
 const services = [
   {
-    title: "Pronalaženje i kvalifikacija leadova",
-    body: "AI istraživanje prospekata, personalizirani outreach i kvalifikacijski sustavi — baza raste sama, bez ručnog traženja.",
+    title: "AI automatizacija & prodajni sustavi",
+    body: "n8n workflowovi koji pokrivaju cijeli prodajni ciklus — od prvog upita do zatvorenog deala. CRM integracija, AI inbox triage, automatski follow-up. Jedini ručni korak: 30 sekundi pregleda drafta.",
   },
   {
-    title: "Prodajni lijevak & CRM",
-    body: "AI agenti prate, kvalificiraju i bogate bazu — svaki lead se prati kroz cijeli ciklus, ništa ne ispada iz sustava.",
+    title: "Performance marketing",
+    body: "Meta Ads kampanje s CAPI server-side trackingom, detekcijom umora kreative i optimizacijom po CPL-u. Upravljam aktivnim kampanjama s mjerljivim rezultatima, ne teorijom.",
   },
   {
-    title: "AI video i kreativa za oglase",
-    body: "Higgsfield-generirani video i vizuali za oglase, spremni za testiranje unutar dana, ne tjedana.",
-  },
-  {
-    title: "Automatizacija oglasnih kampanja",
-    body: "Detekcija umora kreative, sprječavanje preklapanja publike, budžet koji se sam prilagođava.",
-  },
-  {
-    title: "AI vidljivost (GEO/AEO)",
-    body: "Provjera i optimizacija kako AI modeli (ChatGPT, Claude, Perplexity) pronalaze i preporučuju brend — sljedeća generacija SEO-a.",
-    isNew: true,
+    title: "AI kreativa & video za oglase",
+    body: "Higgsfield-generirani kinematski video i vizuali za Meta Ads, spremni za testiranje unutar dana. Produkcija bez studia, bez tima — samo alat i strategija.",
   },
 ];
 
@@ -37,7 +28,7 @@ export default function HowICanHelp() {
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {services.map((s, i) => (
             <div
               key={i}
@@ -57,11 +48,6 @@ export default function HowICanHelp() {
           ))}
         </div>
 
-        {/* Fine print */}
-        <p className="reveal mt-10 text-xs text-gray-600 text-center leading-relaxed">
-          40 specijaliziranih AI sustava za scoring leadova, analizu poziva,
-          content strategiju i još mnogo toga — dostupno na upit.
-        </p>
       </div>
     </section>
   );

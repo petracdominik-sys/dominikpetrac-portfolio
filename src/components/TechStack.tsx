@@ -3,15 +3,15 @@
 const groups = [
   {
     title: "Automatizacija & AI",
-    tools: ["n8n", "Claude / Claude Code", "Higgsfield"],
+    tools: ["n8n (cloud)", "Claude / Claude Code", "OpenAI GPT-4o", "Higgsfield"],
   },
   {
-    title: "CRM & Podaci",
-    tools: ["HubSpot"],
+    title: "CRM & Tracking",
+    tools: ["HubSpot Free", "Meta Pixel + CAPI", "Google Sheets", "GTM"],
   },
   {
-    title: "Kreativa & Oglasi",
-    tools: ["CapCut", "Meta Ads Manager", "Google Ads"],
+    title: "Plaćeni oglasi & Kreativa",
+    tools: ["Meta Ads Manager", "Higgsfield AI video", "CapCut"],
   },
 ];
 
