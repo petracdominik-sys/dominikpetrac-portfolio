@@ -185,10 +185,87 @@ export default function CaseStudyRegge() {
         </div>
 
         {/* Key note */}
-        <div className="reveal card-accent p-6 border-l-4 border-purple-600">
+        <div className="reveal card-accent p-6 border-l-4 border-purple-600 mb-16">
           <p className="text-gray-400 text-sm italic leading-relaxed">
             Ovo nije samo Meta Ads upravljanje — svaki segment (kampanje, CRM, automatizacija, AI agenti) dizajniran je kao integrirani sustav, a ne kao zasebni alati koji rade neovisno.
           </p>
+        </div>
+
+        {/* Technical infrastructure */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-800/30 to-transparent mb-12" />
+
+        <p className="reveal text-xs font-semibold tracking-[0.35em] uppercase text-purple-400 mb-4">
+          Tehnička infrastruktura
+        </p>
+        <h3 className="reveal font-playfair text-2xl sm:text-3xl font-bold text-white mb-10">
+          Stack ispod haube
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          {/* CAPI + GTM */}
+          <div className="reveal card-accent p-6" style={{ transitionDelay: "0ms" }}>
+            <p className="text-xs font-bold tracking-widest uppercase text-blue-400 mb-3">Meta Pixel + CAPI</p>
+            <p className="text-gray-300 text-sm leading-relaxed mb-3">
+              Server-side tracking kroz Conversions API eliminira browser-side gubitak signala (adblockers, iOS 14+). Svaki event ima <code className="text-purple-300 text-xs bg-purple-950/40 px-1 rounded">event_id</code> za deduplication — platforma ne broji isti konverziju dvaput.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {["CAPI browser + server", "event_id dedup", "EMQ optimizacija", "GTM container audit"].map((t) => (
+                <span key={t} className="text-[10px] text-blue-400 bg-blue-950/40 border border-blue-800/40 px-2 py-0.5 rounded">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* HubSpot */}
+          <div className="reveal card-accent p-6" style={{ transitionDelay: "80ms" }}>
+            <p className="text-xs font-bold tracking-widest uppercase text-orange-400 mb-3">HubSpot CRM pipeline</p>
+            <p className="text-gray-300 text-sm leading-relaxed mb-3">
+              Deal stagevi pokrivaju cijeli ciklus: New Lead → Contacted → Offer Sent → Won/Lost. Batch POST za sinkronizaciju kontakata, opt-out compliance na razini deal stagea, automatski stage prijelazi bez ručnog klikanja.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {["Deal stage automation", "Batch POST sync", "Opt-out compliance", "Free tier"].map((t) => (
+                <span key={t} className="text-[10px] text-orange-400 bg-orange-950/40 border border-orange-800/40 px-2 py-0.5 rounded">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Google Sheets config */}
+          <div className="reveal card-accent p-6" style={{ transitionDelay: "160ms" }}>
+            <p className="text-xs font-bold tracking-widest uppercase text-green-400 mb-3">Google Sheets — config layer</p>
+            <p className="text-gray-300 text-sm leading-relaxed mb-3">
+              Svi parametri workflowova (cijene, modeli stolica, email template varijante, follow-up intervali) žive u Sheets — ne u kodu. Klijent može promijeniti ponudu bez ijedne linije koda.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {["No-code config", "Proizvod lookup", "Template varijante", "Master Sheet"].map((t) => (
+                <span key={t} className="text-[10px] text-green-400 bg-green-950/40 border border-green-800/40 px-2 py-0.5 rounded">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* V9 Inbox triage */}
+          <div className="reveal card-accent p-6 relative" style={{ transitionDelay: "240ms" }}>
+            <span className="absolute top-4 right-4 text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full text-green-300 bg-green-900/40 border border-green-700/50">
+              Novo · V9
+            </span>
+            <p className="text-xs font-bold tracking-widest uppercase text-purple-400 mb-3">Inbox reply triage</p>
+            <p className="text-gray-300 text-sm leading-relaxed mb-3">
+              Gmail trigger hvata svaki dolazni mail u realu. AI klasificira interes i šalje strukturirani alert. Filter <code className="text-purple-300 text-xs bg-purple-950/40 px-1 rounded">-subject:[REGGE]</code> sprječava self-loop — vlastiti alertovi ne pokreću novi trigger.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {["Real-time Gmail trigger", "AI klasifikacija", "Self-loop zaštita", "GPT-4o-mini"].map((t) => (
+                <span key={t} className="text-[10px] text-purple-400 bg-purple-950/40 border border-purple-800/40 px-2 py-0.5 rounded">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
