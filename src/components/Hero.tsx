@@ -48,7 +48,7 @@ export default function Hero() {
           className="reveal mb-4 text-xs font-semibold tracking-[0.35em] uppercase text-purple-400"
           style={{ transitionDelay: "0ms" }}
         >
-          Dominik Petrac
+          Dominik Petrac — AI & Automatizacija
         </p>
 
         {/* Main heading */}
@@ -56,24 +56,33 @@ export default function Hero() {
           className="reveal font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
           style={{ transitionDelay: "100ms" }}
         >
-          <span className="text-white">AI radi posao.&nbsp;</span>
+          <span className="text-white">Sustavi,&nbsp;</span>
           <br className="hidden sm:block" />
-          <span className="text-white">Ja gradim&nbsp;</span>
-          <span className="gradient-text">sustav.</span>
+          <span className="text-white">ne&nbsp;</span>
+          <span className="gradient-text">alati.</span>
         </h1>
 
         {/* Subtitle */}
         <p
-          className="reveal max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed"
+          className="reveal max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-3 leading-relaxed"
           style={{ transitionDelay: "200ms" }}
         >
-          Automatizacija cijelog prodajnog ciklusa — od pronalaska pravih
-          leadova do zatvorene prodaje.
+          Gradim integrirane sustave koji automatiziraju prodajni ciklus od
+          prvog upita do zatvorenog deala — a ne skupljam alate koji rade
+          neovisno jedni o drugima.
+        </p>
+
+        {/* Time-save proof line */}
+        <p
+          className="reveal text-sm text-gray-600 mb-10"
+          style={{ transitionDelay: "250ms" }}
+        >
+          185 leadova · CPL 5,47 € · jedini ručni korak: 30 sekundi pregleda
         </p>
 
         {/* CTA */}
         <div
-          className="reveal"
+          className="reveal flex flex-col sm:flex-row items-center justify-center gap-4"
           style={{ transitionDelay: "300ms" }}
         >
           <a
@@ -85,7 +94,13 @@ export default function Hero() {
               boxShadow: "0 0 30px rgba(124, 58, 237, 0.35)",
             }}
           >
-            Kontaktirajte me
+            Besplatna analiza procesa
+          </a>
+          <a
+            href="#automatizacija"
+            className="inline-block px-8 py-4 text-sm font-medium tracking-widest uppercase text-gray-400 hover:text-white transition-colors"
+          >
+            Pogledaj rad →
           </a>
         </div>
 

@@ -3,15 +3,18 @@
 const services = [
   {
     title: "AI automatizacija & prodajni sustavi",
-    body: "n8n workflowovi koji pokrivaju cijeli prodajni ciklus — od prvog upita do zatvorenog deala. CRM integracija, AI inbox triage, automatski follow-up. Jedini ručni korak: 30 sekundi pregleda drafta.",
+    body: "n8n workflowovi koji pokrivaju cijeli prodajni ciklus — od prvog upita do zatvorenog deala. CRM integracija, AI inbox triage, automatski follow-up.",
+    metric: "2h ručnog rada/dan → 30s pregleda",
   },
   {
     title: "Performance marketing",
-    body: "Meta Ads kampanje s CAPI server-side trackingom, detekcijom umora kreative i optimizacijom po CPL-u. Upravljam aktivnim kampanjama s mjerljivim rezultatima, ne teorijom.",
+    body: "Meta Ads kampanje s CAPI server-side trackingom i optimizacijom po CPL-u. Upravljam aktivnim kampanjama s mjerljivim rezultatima, ne teorijom.",
+    metric: "185 leadova · CPL 5,47 € · 4 mj.",
   },
   {
     title: "AI kreativa & video za oglase",
     body: "Higgsfield-generirani kinematski video i vizuali za Meta Ads, spremni za testiranje unutar dana. Produkcija bez studia, bez tima — samo alat i strategija.",
+    metric: "Product foto → video oglas za < 24h",
   },
 ];
 
@@ -35,10 +38,13 @@ export default function HowICanHelp() {
               className="reveal card-accent p-7 relative"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <h3 className="font-semibold text-white text-lg mb-3 pr-16">
+              <h3 className="font-semibold text-white text-lg mb-3">
                 {s.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{s.body}</p>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">{s.body}</p>
+              <p className="text-xs font-semibold text-purple-400 tracking-wide border-t border-purple-900/40 pt-3">
+                {s.metric}
+              </p>
             </div>
           ))}
         </div>

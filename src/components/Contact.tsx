@@ -8,11 +8,16 @@ export default function Contact() {
 
         {/* Heading */}
         <div className="text-center mb-16">
+          <p className="reveal text-xs font-semibold tracking-[0.35em] uppercase text-purple-400 mb-4">
+            Besplatna analiza
+          </p>
           <h2 className="reveal font-playfair text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4">
-            Razgovarajmo.
+            Analizirajmo tvoj proces.
           </h2>
-          <p className="reveal text-gray-400 text-lg mt-4">
-            Otvoren za nove prilike i suradnje — javite se za kratak razgovor.
+          <p className="reveal text-gray-400 text-lg mt-4 max-w-xl mx-auto leading-relaxed">
+            30-minutni poziv — pogledam koji koraci u tvom prodajnom ciklusu
+            gube vrijeme i novac, i kažem ti što bih automatizirao i kako.
+            Bez obaveze.
           </p>
 
           <div className="reveal mt-10" style={{ transitionDelay: "150ms" }}>
@@ -25,7 +30,7 @@ export default function Contact() {
                 boxShadow: "0 0 40px rgba(124, 58, 237, 0.4)",
               }}
             >
-              Pišite mi
+              Zatraži besplatnu analizu
             </a>
           </div>
         </div>
