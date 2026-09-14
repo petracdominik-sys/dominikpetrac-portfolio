@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import HowICanHelp from "@/components/HowICanHelp";
+import ComparisonTable from "@/components/ComparisonTable";
 import AutomationShowcase from "@/components/AutomationShowcase";
 import CaseStudyRegge from "@/components/CaseStudyRegge";
 import AIVideoShowcase from "@/components/AIVideoShowcase";
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <HowICanHelp />
+        <ComparisonTable />
         <AutomationShowcase />
         <CaseStudyRegge />
         <AIVideoShowcase />
