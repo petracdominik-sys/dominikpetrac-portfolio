@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { label: "Usluge", href: "#kako-mogu-pomoci" },
-  { label: "Rad", href: "#automatizacija" },
-  { label: "Case Study", href: "#case-study-regge" },
+  { label: "Case Studies", href: "#case-study-regge" },
+  { label: "AI Agenti", href: "#ai-agenti" },
+  { label: "Video", href: "#ai-video" },
   { label: "O meni", href: "#o-meni" },
   { label: "Kontakt", href: "#kontakt" },
 ];

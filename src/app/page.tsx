@@ -1,13 +1,12 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import HowICanHelp from "@/components/HowICanHelp";
 import ComparisonTable from "@/components/ComparisonTable";
-import AutomationShowcase from "@/components/AutomationShowcase";
 import CaseStudyRegge from "@/components/CaseStudyRegge";
+import ColdOutreachCaseStudy from "@/components/ColdOutreachCaseStudy";
+import AIAgents from "@/components/AIAgents";
 import AIVideoShowcase from "@/components/AIVideoShowcase";
-import Process from "@/components/Process";
-import About from "@/components/About";
 import TechStack from "@/components/TechStack";
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 import ScrollRevealProvider from "@/components/ScrollRevealProvider";
 
@@ -17,12 +16,11 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <HowICanHelp />
         <ComparisonTable />
-        <AutomationShowcase />
         <CaseStudyRegge />
+        <ColdOutreachCaseStudy />
+        <AIAgents />
         <AIVideoShowcase />
-        <Process />
         <TechStack />
         <About />
         <Contact />
