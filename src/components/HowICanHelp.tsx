@@ -35,11 +35,6 @@ export default function HowICanHelp() {
               className="reveal card-accent p-7 relative"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              {s.isNew && (
-                <span className="absolute top-5 right-5 text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded-full text-purple-300 bg-purple-900/40 border border-purple-700/50">
-                  Novo
-                </span>
-              )}
               <h3 className="font-semibold text-white text-lg mb-3 pr-16">
                 {s.title}
               </h3>
